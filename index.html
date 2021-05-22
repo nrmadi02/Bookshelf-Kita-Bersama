@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Bookshelf Kita Bersama</title>
+</head>
+
+<body>
+    <header>
+        <p class="header-text">Bookshelf Kita Bersama</p>
+        <p class="header-title">by Nur Ahmadi</p>
+    </header>
+    <main>
+        <div class="container-form">
+            <p>Tambahkan Buku</p>
+            <form class="form" action="#" id="form">
+                <div class="form-group form-title">
+                    <label for="title">Judul Buku</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                <div class="form-group form-title">
+                    <label for="date">Pencipta</label>
+                    <input type="text" id="author" name="date" required>
+                </div>
+                <div class="form-group form-title">
+                    <label for="date">Tahun Terbit</label>
+                    <input type="number" id="year" name="year" required>
+                </div>
+                <div>
+                    <label for="check">Buku sudah selesai dibaca</label>
+                    <input id="check" name="check" type="checkbox">
+                </div>
+                <input type="submit" value="Tambahkan" name="Submit" class="btn-submit">
+            </form>
+        </div>
+        <div class="container-info">
+            <form class="container-seacrh" action="#" id="search-form">
+                <div class="form-seacrh">
+                    <label for="search">Cari Judul</label>
+                    <input style="width: 95%; margin-top: 5px;" type="text" id="search" name="search">
+                </div>
+                <input class="btn-search" value="Cari" type="submit" name="Submit">
+            </form>
+            <div class="container-hasil">
+                <div class="container-belum">
+                    <p class="title-belum">Belum Selesai Dibaca</p>
+                    <div class="list-buku-belum" id="belum">
+
+                    </div>
+                </div>
+                <div class="container-selesai">
+                    <p class="title-selesai">Selesai Dibaca</p>
+                    <div class="list-buku-selesai" id="selesai">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <p>Yakin ingin mengahapus buku ini ?</p>
+                <div class="modal-button">
+                    <div>
+                        <button class="btn-yakin" id="yakin">Yakin</button>
+                        <button class="btn-tidak" id="tidak">Tidak</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modalEdit" class="modal-edit">
+            <div class="modal-content">
+                <p>Edit Buku</p>
+                <form class="form" action="#" id="form-edit">
+                    <div class="form-group form-title">
+                        <label for="title">Judul Buku</label>
+                        <input type="text" id="title-edit" name="title" required>
+                    </div>
+                    <div class="form-group form-title">
+                        <label for="date">Pencipta</label>
+                        <input type="text" id="author-edit" name="date" required>
+                    </div>
+                    <div class="form-group form-title">
+                        <label for="date">Tahun Terbit</label>
+                        <input type="number" id="year-edit" name="year" required>
+                    </div>
+                    <div>
+                        <label for="check">Buku sudah selesai dibaca</label>
+                        <input id="check-edit" name="check" type="checkbox">
+                    </div>
+                    <div style="display: flex;">
+                        <input type="submit" value="Simpan" name="Submit" class="btn-submit">
+                        <div id="batal" class="btn-yakin-edit">Batal</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="js/storage.js"></script>
+    <script src="js/content-dom.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
